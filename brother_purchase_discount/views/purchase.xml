@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="purchase_repo_view_inherit" model="ir.ui.view">
+        <field name="name">purchase.discounts.repo.form</field>
+        <field name="model">purchase.discounts.repo</field>
+        <field name="inherit_id" ref="multi_purchase_discount.purchase_dist_repo_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='other_dsc']" position="after">
+                <field name="after_discount_n" sum="Fin"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
